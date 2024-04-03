@@ -73,7 +73,7 @@ const LoginForm = () => {
           <Box className="mt-5 w-full space-y-4">
             <Box>
               <Input
-                placeholder="e.g. 10000001"
+                placeholder="Enter your surname"
                 name="student_code"
                 value={formik.values.student_code}
                 onChange={formik.handleChange}
@@ -88,7 +88,7 @@ const LoginForm = () => {
             </Box>
             <Box>
               <Input
-                placeholder="e.g. 3tyXduU"
+                placeholder="Enter student access pin"
                 name="pin"
                 value={formik.values.pin}
                 onChange={formik.handleChange}

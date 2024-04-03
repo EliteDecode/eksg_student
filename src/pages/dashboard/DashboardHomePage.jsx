@@ -26,10 +26,7 @@ const DashboardHomePage = () => {
       title: "Othernames",
       value: user?.student?.othername,
     },
-    {
-      title: "Student Code",
-      value: user?.student?.student_code,
-    },
+
     {
       title: "Gender",
       value: user?.student?.gender,
@@ -82,23 +79,6 @@ const DashboardHomePage = () => {
         </Box>
       </Box>
       <Box>
-        <Box role="presentation">
-          <Breadcrumbs aria-label="breadcrumb">
-            <Link
-              to="/dashboard/schools"
-              className="hover:underline"
-              style={{ fontSize: "14px" }}>
-              School Name
-            </Link>
-
-            <Link
-              className="hover:underline"
-              aria-current="page"
-              style={{ fontSize: "14px" }}>
-              Adventist
-            </Link>
-          </Breadcrumbs>
-        </Box>
         <Box className="mt-5">
           <Box className="bg-white my-3 rounded-md p-1.5 shadow-md w-[15%]">
             <img
@@ -122,6 +102,14 @@ const DashboardHomePage = () => {
                         <Typography>{item.value}</Typography>
                       </Box>
                     ))}
+                    {studentDetails?.student_code != null && (
+                      <Box className="flex  items-center justify-between space-x-2">
+                        <Typography className="font-bold text-[14px] text-[#000]">
+                          Student Exam Number
+                        </Typography>
+                        <Typography>{studentDetails?.student_code}</Typography>
+                      </Box>
+                    )}
                   </Box>
                 </Box>
               </Box>
